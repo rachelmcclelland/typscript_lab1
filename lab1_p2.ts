@@ -28,3 +28,22 @@ let c: Color = Color.Green;
 console.log("Enum: Value of colorName is: "+colorName);
 console.log("Enum: Value of c is: "+c);
 console.log("Enum: Name of c is: " + Color[c]);
+
+//any
+let notSure: any = 4;
+notSure = "maybe a string instead";
+console.log("Value is a string: "+notSure+".");
+notSure = false;
+console.log("Now value is a boolean: "+notSure+".");
+
+//any array
+let listany: any[] = [1, true, "free"];
+for(let i = 0; i < listany.length;i++)
+{
+    console.log("Before: Entry "+(i+1)+" is: "+listany[i]+".");
+}
+listany[1] = 100;
+for(let i = 0; i < listany.length;i++)
+{
+    console.log("After: Entry "+(i+1)+" is: "+listany[i]+".");
+}   
